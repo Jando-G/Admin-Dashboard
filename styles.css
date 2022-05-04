@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+:root {
+    --main-bg-color: #bfdbfe;
+    --dark-bg-color:#3b82f6;
+    --light-bg-color: #eff6ff;
+}
 * {
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif; 
 }
 body {
     margin: 0;
@@ -13,18 +20,28 @@ body {
 .sidebar {
     grid-column: 1;
     grid-row: 1 / 3;
-    background-color: #8b5cf6;
+    background-color: var(--dark-bg-color);
     color: white;
+    padding: 1rem 0 60rem 2rem;
+    font-weight: 500;
+}
+.sidebar > div {
     display: grid;
-    padding: 1rem 0 30rem 2rem;
+    row-gap: 1rem;
+    margin-top: 4rem;
+    grid-template-columns: 4rem 1fr;
+}
+.sidebar p {
+    font-size: 1.6rem;
 }
 .topbar {
-    background-color: #f5f3ff;
+    background-color: var( --light-bg-color);
     display: grid;
     grid-template-columns: 5fr 3fr;
+    grid-template-rows: 2fr 7fr;
 }
 .content {
-    background-color: #ddd6fe;
+    background-color: var(--main-bg-color);
     display: grid;
     grid-template-rows: 1fr repeat(3, 6fr);
     grid-template-columns: 3fr 3fr 2fr;
@@ -32,14 +49,16 @@ body {
     padding: 0 2rem 3rem 2rem;
 }
 .content > div:not(.contentside) {
-    background-color: #f5f3ff;
+    background-color: var( --light-bg-color);
     border-radius: 1rem;
+    border-left: 10px solid #3fa53f;
+    padding: 2rem 8rem 0 3rem;
 }
 .contentside {
     display: grid;
     grid-column: 3;
     grid-row: 2 / 5;
-    background-color: #ddd6fe;
+    background-color: var(--main-bg-color);
     grid-template-rows: 12fr 1fr 12fr;
     gap: 2rem;
 }
@@ -52,7 +71,7 @@ body {
     margin: 0 0 -2rem 0;
 }
 .contentside > div {
-    background-color: #f5f3ff;
+    background-color: var( --light-bg-color);
     border-radius: 1rem;
 }
 .announcements {
@@ -88,10 +107,10 @@ input {
     height: 2rem;
     width: 100%;
     border-radius: 1rem;
-    background-color: #ddd6fe;
+    background-color: var(--main-bg-color);
     padding-left: 1rem;
 }
 input:focus {
     outline: none;
-    border: 2px solid #8b5cf6;
+    border: 2px solid var(--dark-bg-color);
 }
