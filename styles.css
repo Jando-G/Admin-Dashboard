@@ -17,15 +17,26 @@ body {
     grid-template-columns: 1fr 6fr;
     grid-template-rows: 1fr 5fr;
 }
+.header {
+    display: grid;
+    grid-template-columns: 4rem 1fr;
+    margin-top: 1.5rem;
+}
+h1 {
+    display: flex;
+    margin: 0;
+    align-items: center;
+    height: 100%;
+}
 .sidebar {
     grid-column: 1;
     grid-row: 1 / 3;
     background-color: var(--dark-bg-color);
     color: white;
-    padding: 1rem 0 60rem 2rem;
+    padding: 0 0 60rem 1.5rem;
     font-weight: 500;
 }
-.sidebar > div {
+.sidebar > div:not(.header) {
     display: grid;
     row-gap: 1rem;
     margin-top: 4rem;
@@ -48,11 +59,21 @@ body {
     gap: 2rem;
     padding: 0 2rem 3rem 2rem;
 }
+.cardbottom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: end;
+    margin-right: 0;
+    padding: 3rem 4rem 0 25rem ;
+}
 .content > div:not(.contentside) {
     background-color: var( --light-bg-color);
     border-radius: 1rem;
     border-left: 10px solid #3fa53f;
-    padding: 2rem 8rem 0 3rem;
+    padding: 2rem 0rem 0 3rem;
+}
+.content > div:not(.contentside) > p {
+    margin-right: 8rem;
 }
 .contentside {
     display: grid;
