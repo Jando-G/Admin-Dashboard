@@ -13,7 +13,7 @@ body {
 }
 .container {
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 1fr 8fr;
     grid-template-rows: 16vh 84vh;
 }
 .header {
@@ -129,7 +129,7 @@ h3, h2, h4{
     grid-template-columns: 1fr 4fr;
     align-items: center;
     justify-items: center;
-    padding: 2rem 8rem 2rem 8rem;
+    padding: 2rem 3rem 2rem 3rem;
 }
 .trending img {
     height: 60px;
