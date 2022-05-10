@@ -57,7 +57,9 @@ h1 {
     align-items: center;
     grid-template-columns: 2vw 66vw 4vw 4vw 9vw;
     grid-template-rows: 3fr 7fr;
-    box-shadow: 3px 4px 3px rgb(182, 191, 194);
+    box-shadow: 0 3px 4px rgb(182, 191, 194);
+    position: relative;
+    z-index: 10;
 }
 .content {
     background-color: var(--main-bg-color);
@@ -154,10 +156,10 @@ h3, h2{
 .trending {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 3vw 8vw;
     align-items: center;
-    justify-items: center;
-    padding: 1vh 1vw 1vh 1vw;
+    justify-content: center;
+    padding: 1vh 0 1vh 0;
 }
 .trending h4, p {
     margin: 0;
